@@ -1,0 +1,13 @@
+.hero-logo {
+    width: 50% !important;
+}
+
+@media (min-width: 768px) {
+    .hero-logo {
+        width: 25% !important;
+    }
+}
+
+.banner-bg {
+    box-shadow: 0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.5) !important;
+}
