@@ -1,30 +1,30 @@
-{{ with site.Params.cta }}
+{{ with .Site.Params.partners }}
   {{ if .enable }}
-    <section class="call-to-action has-bg-color">
-      <div class="container-xxl">
+    <section class="overflow-hidden">
+      <div class="container">
         <div class="row">
-          <div class="col-lg-12">
-            <div class="block">
-              <div class="section-title text-center mb-0" data-aos="fade-up">
-                <h2 class="title underline-none">{{ .title | markdownify }}</h2>
-                <p>{{ .content | markdownify }}</p>
-                <a href="{{ .button_link }}" class="btn btn-primary mt-4">
-                  {{ .button }}
-                </a>
+          <div class="col-md-12" data-aos="fade-left">
+            <div class="brand-carousel swiper">
+              <div class="swiper-wrapper">
+                {{ range .brand_images }}
+                  {{ if fileExists (add `assets/` .path) }}
+                    <div class="swiper-slide">
+                      <div class="brand-item">
+                        {{ $img := resources.Get .path }}
+                        {{ $img_width := $img.Width }}
+                        {{ $img_orginal := add (add (string $img_width) "x") " " }}
+                        {{ $img_src := ($img.Resize $img_orginal).RelPermalink }}
+                        {{ $imgWebp := add (add (string $img_width) "x") " webp" }}
+                        {{ $imgWebp_src := ($img.Resize $imgWebp).RelPermalink }}
+                        <a href="{{ .url }}" target="_blank">
+                          <img loading="lazy" decoding="async" class="img-fluid" width="{{ $img_width }}" height="{{ $img.Height }}"
+                            src="{{ $imgWebp_src }}" alt="Brand Image" onerror="this.onerror=null;this.src='{{ $img_src }}'" />
+                        </a>
+                      </div>
+                    </div>
+                  {{ end }}
+                {{ end }}
               </div>
-            </div>
-
-            <div class="has-circle has-bg-anim" data-aos="fade-in">
-              <img
-                class="wave-1 w-100"
-                src="{{ `images/waves/05.svg` | absURL }}"
-                alt="*" />
-              <span class="circle-1 ratio-32"></span>
-              <span class="circle-2 ratio-85 fill"></span>
-              <span class="circle-3 ratio-47"></span>
-              <span class="circle-4 ratio-20 fill"></span>
-              <span class="circle-5 ratio-73"></span>
-              <span class="circle-6 ratio-37"></span>
             </div>
           </div>
         </div>
@@ -32,6 +32,7 @@
     </section>
   {{ end }}
 {{ end }}
+
 
 
 <footer

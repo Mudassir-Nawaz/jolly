@@ -18,10 +18,17 @@ event:
   button_link: "/"
 
 # impressions
-impressions:
+## every day
+every_day:
   enable: true
   pretitle: "Impressions"
   title: "Every Day"
+  gallery: "images/"
+
+## fire cars
+fire_cars:
+  enable: true
+  title: "Fire Cars"
   gallery: "images/"
 
 
@@ -42,31 +49,25 @@ brands_carousel:
   - "images/brands/05-colored.png"
 
 
-# features
-features:
+# news & missions
+## news
+news:
   enable: true
-  subtitle: "Special Features"
-  title: "Elements to <br> get you started"
+  title: "News"
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas <br> Werat viverra id et aliquet. vulputate egestas sollicitudin."
-  features_blocks:
-  - icon: "las la-lock"
-    title: "Updated Security"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-  - icon: "las la-magnet"
-    title: "Magnetic Turning"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-  - icon: "las la-tachometer-alt"
-    title: "Secured &amp; up-to-date"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-  - icon: "las la-link"
-    title: "Instant Link Sharing"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-  - icon: "las la-lock"
-    title: "Updated Security"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
-  - icon: "las la-magnet"
-    title: "Magnetic Turning"
-    content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Neque enim id diam ornare volutpat in sagitis, aliquet. Arcu cursus"
+
+## missions
+missions:
+  enable: true
+  title: "Missions"
+  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas <br> Werat viverra id et aliquet. vulputate egestas sollicitudin."
+
+# contact
+contact:
+  enable: true
+  pretitle: "Contact"
+  title: "Contact Now"
+  description: "Contact us now to get started!"
 
 
 # intro_video

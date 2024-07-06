@@ -139,6 +139,10 @@
 // page header
 .page-header {
   position: relative;
+  top: 40px;
+  @include tablet {
+    top: 100px;
+  }
 
   .block {
     padding: 120px 0;

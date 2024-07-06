@@ -118,7 +118,7 @@ rel = "manifest"
 [params.variables]
 white = "#ffffff"
 black = "#000000"
-light = "#FAFAFA"
+light = "#ffffff"
 primary_color = "#000000"
 
 # font variable
