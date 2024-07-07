@@ -32,7 +32,7 @@
     height: calc(50% + 160px);
     width: calc(100% - 30px);
     border-radius: 30px;
-    background-color: lighten(saturate(adjust-hue($primary-color, 16), 0.87), 42.94);
+    background-color: lighten(saturate(adjust-hue($primary-color, 16), 0.87), 82.94);
     z-index: 1;
 
     &::before,
@@ -157,7 +157,7 @@
     height: 100%;
     width: calc(100% - 30px);
     border-radius: 30px;
-    background-color: lighten(saturate(adjust-hue($primary-color, 16), 0.87), 42.94);
+    background-color: lighten(saturate(adjust-hue($primary-color, 16), 0.87), 62.94);
     z-index: 1;
 
     .wave-1,
@@ -354,7 +354,7 @@
     width: calc(100% - 70px);
     top: 45px;
     left: 45px;
-    background: #fe6019;
+    background-color: lighten(saturate(adjust-hue($primary-color, 16), 0.87), 32.94);
     z-index: -1;
     border-radius: 50%;
     opacity: .15;
@@ -514,6 +514,8 @@
       padding: 80px 0;
       position: relative;
       z-index: 3;
+      background-color: lighten(saturate(adjust-hue($primary-color, 16), 0.87), 82.94);
+      border-radius: 30px;
       .section-title {
         padding: 0 15px;
       }
@@ -855,6 +857,8 @@
       padding: 80px 15px;
       position: relative;
       z-index: 3;
+      background-color: lighten(saturate(adjust-hue($primary-color, 16), 0.87), 82.94);
+      border-radius: 30px;
     }
 
     .has-circle {

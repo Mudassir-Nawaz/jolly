@@ -53,7 +53,7 @@
         <div class="block">
           <div class="section-title text-center mb-0" data-aos="fade-up">
             <h2 class="title underline-none">{{ .title | markdownify }}</h2>
-            <p class="text-white">{{ .content | markdownify }}</p>
+            <p>{{ .content | markdownify }}</p>
             <a href="{{ .button_link }}" class="btn btn-primary mt-4">
               {{ .button }}
             </a>
@@ -91,7 +91,7 @@
     <div class="row justify-content-center aos-init aos-animate">
       <div class="col-lg-10">
         <div class="row justify-content-center">
-          {{ partial "slider.html" (dict "Dir" "images/gallery" "Description" false ) }}
+          {{ partial "slider.html" (dict "Dir" "images/everyday" "Description" false ) }}
         </div>
       </div>
     </div>
@@ -114,7 +114,7 @@
     <div class="row justify-content-center aos-init aos-animate">
       <div class="col-lg-10">
         <div class="row justify-content-center">
-          {{ partial "slider.html" (dict "Dir" "images/gallery" ) }}
+          {{ partial "slider.html" (dict "Dir" "images/everyday" "Description" true ) }}
         </div>
       </div>
     </div>
@@ -147,7 +147,7 @@
             <div class="swiper-slide">
               <div class="features-card">
                 <h3 class="title">{{ .Title | markdownify }}</h3>
-                <p class="mb-0">{{ .Params.description }}</p>
+                <p class="mb-0">{{ .Content | truncate 120 }}</p>
                 <a href="{{ .Permalink }}" class="btn btn-primary mt-4">
                   Read More >>
                 </a>
@@ -185,7 +185,7 @@
             <div class="swiper-slide">
               <div class="features-card">
                 <h3 class="title">{{ .Title | markdownify }}</h3>
-                <p class="mb-0">{{ .Params.description }}</p>
+                <p class="mb-0">{{ .Content | truncate 120 }}</p>
                 <a href="{{ .Permalink }}" class="btn btn-primary mt-4">
                   Read More>>
                 </a>

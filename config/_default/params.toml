@@ -47,28 +47,39 @@ address = "2118 Thornridge Cir. Syracuse, Connecticut 35624"
 phone = ["+704-555-0127", "+205-857-2321", "+002-569-6969"]
 email = ["info@andromeda.io", "smith@anderson.io", "john@anderson.io"]
 
+# map
+[map]
+enable = true
+source = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d108948.88854916228!2d73.00690027589671!3d31.423691629070493!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x392242a895a55ca9%3A0xdec58f88932671c6!2sFaisalabad%2C%20Punjab%2C%20Pakistan!5e0!3m2!1sen!2suk!4v1720341588925!5m2!1sen!2suk"
+
 # partners
-[params.partners]
+[partners]
 enable = true
 
-[[params.partners.brand_images]]
-url = "https://example.com/page1"
-path = "images/brands/01-colored.png"
-[[params.partners.brand_images]]
-url = "https://example.com/page2"
-path = "images/brands/02-colored.png"
-[[params.partners.brand_images]]
-url = "https://example.com/page2"
-path = "images/brands/03-colored.png"
-[[params.partners.brand_images]]
-url = "https://example.com/page2"
-path = "images/brands/04-colored.png"
-[[params.partners.brand_images]]
-url = "https://example.com/page2"
-path = "images/brands/05-colored.png"
-[[params.partners.brand_images]]
-url = "https://example.com/page2"
-path = "images/brands/06-colored.png"
+[[partners.brand_images]]
+path = "images/partners/gvz.png"
+url = "/"
+[[partners.brand_images]]
+path = "images/partners/kapo_zh.png"
+url = "/"
+[[partners.brand_images]]
+path = "images/partners/logo_fw_ba-2019.png"
+url = "/"
+[[partners.brand_images]]
+path = "images/partners/logo_fwu_dietikon.png"
+url = "/"
+[[partners.brand_images]]
+path = "images/partners/logo_spital_limmattal.png"
+url = "/"
+[[partners.brand_images]]
+path = "images/partners/logo_svu.png"
+url = "/"
+[[partners.brand_images]]
+path = "images/partners/srz.png"
+url = "/"
+[[partners.brand_images]]
+path = "images/partners/zso_limmattal.png"
+url = "/"
 
 # seo meta data for OpenGraph / Twitter Card
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo

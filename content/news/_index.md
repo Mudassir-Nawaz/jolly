@@ -1,5 +1,5 @@
 ---
-title: "Blog"
+title: "News"
 description: "meta description"
 draft: false
 ---

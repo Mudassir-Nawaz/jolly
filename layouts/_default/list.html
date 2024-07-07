@@ -1,20 +1,26 @@
 {{ define "main" }}
-  {{ partial "page-header" . }}
+  {{ partial "page-header.html" . }}
 
 
-  <section class="section">
-    <div class="container">
-      <ul class="text-center">
-        {{ range .RegularPages }}
-          <li class="m-3">
-            <a
-              href="{{ .Permalink }}"
-              class="text-dark dark:text-darkmode-dark block text-xl">
-              {{ .Title }}
-            </a>
-          </li>
+  <section class="section-sm" data-aos="fade-in">
+    <div class="container-xxl">
+      <div class="row justify-content-center">
+        {{ range .Paginator.Pages }}
+          <div class="col-lg-5">
+            {{ partial "components/blog-card.html" . }}
+          </div>
         {{ end }}
-      </ul>
+      </div>
     </div>
   </section>
+
+  <div class="section-sm pt-0">
+    <div class="container-xxl">
+      <div class="row mb-4">
+        <div class="col-12">
+          {{ partial "components/pagination.html" . }}
+        </div>
+      </div>
+    </div>
+  </div>
 {{ end }}

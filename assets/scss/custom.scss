@@ -11,3 +11,179 @@
 .banner-bg {
     box-shadow: 0px 4px 4px 0px #00000040,inset 0 0 0 1000px rgba(0,0,0,.5) !important;
 }
+
+.timeline {
+    position: relative !important;
+    background: $white !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+    padding: 5rem !important;
+    margin: 0 auto 1rem auto !important;
+    overflow: hidden !important;
+}
+.timeline:after {
+    content: "" !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    margin-left: -2px !important;
+    border-right: 2px dashed lighten(saturate($primary-color, 0.87), 48.24) !important;
+    height: 100% !important;
+    display: block !important;
+}
+
+.timeline-row {
+    padding-left: 50% !important;
+    position: relative !important;
+    margin-bottom: 30px !important;
+}
+.timeline-row .timeline-time {
+    position: absolute !important;
+    right: 50% !important;
+    top: 15px !important;
+    text-align: right !important;
+    margin-right: 20px !important;
+    font-size: 1.5rem !important;
+}
+.timeline-row .timeline-time small {
+    display: block !important;
+    font-size: 0.8rem !important;
+}
+.timeline-row .timeline-content {
+    position: relative !important;
+    padding: 20px 30px !important;
+    background-color: lighten(saturate(adjust-hue($primary-color, 16), 0.87), 82.94);
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    border-radius: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    text-align: center !important;
+}
+.timeline-row .timeline-content:after {
+    content: "" !important;
+    position: absolute !important;
+    top: 20px !important;
+    height: 16px !important;
+    width: 16px !important;
+    background-color: lighten(saturate($primary-color, 0.87), 48.24);
+}
+.timeline-row .timeline-content:before {
+    content: "" !important;
+    position: absolute !important;
+    top: 20px !important;
+    right: -49px !important;
+    width: 20px !important;
+    height: 20px !important;
+    -webkit-border-radius: 100px !important;
+    -moz-border-radius: 100px !important;
+    border-radius: 100px !important;
+    z-index: 10 !important;
+    background: lighten(saturate($primary-color, 0.87), 48.24);
+    border: 2px dashed lighten(saturate($primary-color, 0.87), 48.24) !important;
+}
+.timeline-row .timeline-content h4 {
+    margin: 0 0 20px 0 !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+    text-overflow: ellipsis !important;
+    line-height: 150% !important;
+}
+.timeline-row .timeline-content p {
+    margin-bottom: 30px !important;
+    line-height: 150% !important;
+}
+.timeline-row .timeline-content .thumbs {
+    margin-bottom: 20px !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+}
+.timeline-row .timeline-content .thumbs img {
+    margin: 5px !important;
+    max-width: 60px !important;
+}
+.timeline-row:nth-child(even) .timeline-content {
+    margin-left: 40px !important;
+    text-align: left !important;
+}
+.timeline-row:nth-child(even) .timeline-content:after {
+    left: -8px !important;
+    right: initial !important;
+    border-bottom: 0 !important;
+    border-left: 0 !important;
+    transform: rotate(-135deg) !important;
+}
+.timeline-row:nth-child(even) .timeline-content:before {
+    left: -52px !important;
+    right: initial !important;
+}
+.timeline-row:nth-child(odd) {
+    padding-left: 0 !important;
+    padding-right: 50% !important;
+}
+.timeline-row:nth-child(odd) .timeline-time {
+    right: auto !important;
+    left: 50% !important;
+    text-align: left !important;
+    margin-right: 0 !important;
+    margin-left: 20px !important;
+}
+.timeline-row:nth-child(odd) .timeline-content {
+    margin-right: 40px !important;
+}
+.timeline-row:nth-child(odd) .timeline-content:after {
+    right: -8px !important;
+    border-left: 0 !important;
+    border-bottom: 0 !important;
+    transform: rotate(45deg) !important;
+}
+
+@media (max-width: 992px) {
+    .timeline {
+        padding: 15px !important;
+    }
+    .timeline:after {
+        border: 0 !important;
+    }
+    .timeline .timeline-row:nth-child(odd) {
+        padding: 0 !important;
+    }
+    .timeline .timeline-row:nth-child(odd) .timeline-time {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0 0 10px 0 !important;
+    }
+    .timeline .timeline-row:nth-child(odd) .timeline-content {
+        margin: 0 !important;
+    }
+    .timeline .timeline-row:nth-child(odd) .timeline-content:before {
+        display: none !important;
+    }
+    .timeline .timeline-row:nth-child(odd) .timeline-content:after {
+        display: none !important;
+    }
+    .timeline .timeline-row:nth-child(even) {
+        padding: 0 !important;
+    }
+    .timeline .timeline-row:nth-child(even) .timeline-time {
+        position: relative !important;
+        top: 0 !important;
+        left: 0 !important;
+        margin: 0 0 10px 0 !important;
+        text-align: left !important;
+    }
+    .timeline .timeline-row:nth-child(even) .timeline-content {
+        margin: 0 !important;
+    }
+    .timeline .timeline-row:nth-child(even) .timeline-content:before {
+        display: none !important;
+    }
+    .timeline .timeline-row:nth-child(even) .timeline-content:after {
+        display: none !important;
+    }
+}

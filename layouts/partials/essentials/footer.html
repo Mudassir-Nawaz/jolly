@@ -1,6 +1,12 @@
-{{ with .Site.Params.partners }}
+<footer
+  class="footer pb-5 {{ if site.Params.cta.enable }}
+  {{ else }}
+    mt-0
+  {{ end }}">
+  <div class="container">
+    {{ with .Site.Params.partners }}
   {{ if .enable }}
-    <section class="overflow-hidden">
+    <section class="overflow-hidden" id="logos">
       <div class="container">
         <div class="row">
           <div class="col-md-12" data-aos="fade-left">
@@ -17,7 +23,7 @@
                         {{ $imgWebp := add (add (string $img_width) "x") " webp" }}
                         {{ $imgWebp_src := ($img.Resize $imgWebp).RelPermalink }}
                         <a href="{{ .url }}" target="_blank">
-                          <img loading="lazy" decoding="async" class="img-fluid" width="{{ $img_width }}" height="{{ $img.Height }}"
+                          <img loading="lazy" decoding="async" class="img-fluid" width="120px" height="{{ $img.Height }}"
                             src="{{ $imgWebp_src }}" alt="Brand Image" onerror="this.onerror=null;this.src='{{ $img_src }}'" />
                         </a>
                       </div>
@@ -32,18 +38,9 @@
     </section>
   {{ end }}
 {{ end }}
-
-
-
-<footer
-  class="footer pb-5 {{ if site.Params.cta.enable }}
-  {{ else }}
-    mt-0
-  {{ end }}">
-  <div class="container">
     <div class="row justify-content-center">
       <div class="col-12">
-        <div class="border-top pb-5" data-aos="fade-up"></div>
+        <div class="pb-5" data-aos="fade-up"></div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-6" data-aos="fade-up">
         <div class="pe-4">
@@ -64,7 +61,7 @@
               {{ site.Params.logo_text | markdownify }}
             {{ end }}
           </a>
-          <p class="mb-0">{{ site.Params.footer_info | markdownify }}</p>
+          {{/*  <p class="mb-0">{{ site.Params.footer_info | markdownify }}</p>  */}}
         </div>
       </div>
       <div
@@ -132,10 +129,21 @@
         </div>
       </div>
     </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-12 col-md-10">
+        {{ with site.Params.map }}
+          {{ if .enable }}
+        <div class="ratio ratio-21x9">
+          <iframe src="{{ .source }}" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+          {{ end }}
+        {{ end }}
+      </div>
+      </div>
   </div>
 </footer>
 
-<div class="footer-bottom">
+{{/*  <div class="footer-bottom">
   <div class="container">
     <div class="row">
       <div class="col-12">
@@ -145,4 +153,4 @@
       </div>
     </div>
   </div>
-</div>
+</div>  */}}

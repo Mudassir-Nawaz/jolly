@@ -12,31 +12,31 @@ url = "about/"
 weight = 2
 
 [[main]]
-name = "Blog"
-url = "blog/"
+name = "Applications"
+url = "applications/"
 weight = 3
 
 [[main]]
+name = "News & Missions"
 weight = 4
-name = "Pages"
 hasChildren = true
 
-  [[main]]
-  parent = "Pages"
-  name = "Blog Details"
-  url = "blog/post-1/"
-  weight = 1
-
-  [[main]]
-  parent = "Pages"
-  name = "Terms & Conditions"
-  url = "terms-and-conditions/"
-  weight = 2
-  
 [[main]]
-name = "Contact"
-url = "contact/"
+weight = 1
+name = "News"
+url = "news/"
+parent = "News & Missions"
+
+[[main]]
+weight = 2
+name = "Missions"
+url = "missions/"
+parent = "News & Missions"
+
+[[main]]
 weight = 5
+name = "Generic"
+url = "generic"
 
 
 # footer menu
@@ -46,16 +46,21 @@ url = "about/"
 weight = 1
 
 [[footer]]
-name = "Blog"
-url = "blog/"
+name = "News"
+url = "news/"
 weight = 2
 
 [[footer]]
-name = "Blog Details"
-url = "blog/post-1/"
+name = "Missions"
+url = "missions/"
 weight = 3
 
 [[footer]]
-name = "Terms & Conditions"
-url = "terms-and-conditions/"
+name = "Applications"
+url = "applications/"
 weight = 4
+
+[[footer]]
+name = "Generic"
+url = "generic/"
+weight = 5
